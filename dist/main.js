@@ -1,0 +1,1 @@
+(()=>{"use strict";window.addEventListener("load",(async()=>{document.getElementById("header").innerHTML=await(console.log("Header"),'\n\n<div class="Header-main">\n    <div class="Header-logo">\n        <h1>\n            <a href="/">Pokedex</a>\n        </h1>\n    </div>\n    <div class="Header-nav">\n        <a href="#/about/">About</a>\n    </div>\n</div>\n\n\n\n')}))})();
