@@ -1,0 +1,81 @@
+
+.Header{
+    &-main{
+        display: flex;
+        height: 100%;
+        align-items: center;
+        padding-left: 25px;
+        animation: 1s navbar 0.5s ease-in-out;
+        @keyframes navbar {
+            0%{
+                transform: translateY(-200px);
+            }
+            100%{
+                transform: translateY(0);
+            }
+        }
+        .Header-logo{
+            display: flex;
+            align-items: center;
+            img{
+                width: 75px;
+                padding-right: 20px;
+            }
+            h1{
+                a{
+                    text-decoration: none;
+                }
+            }
+        }
+        .Header-nav{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            ul{
+               
+                background-color: rgb(56, 56, 56);
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 10px;
+                padding-right: 80px;
+                border-radius: 5px;
+                
+                li{
+                    list-style: none;
+                    a{
+                        text-decoration: none;
+                        color: white;
+                    }
+                    
+                }
+            }
+            span{
+                background-color: rgb(56, 56, 56);
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                border-radius: 5px;
+                position: relative;
+                left: -10px;
+                
+                img{
+                    width: 10px;
+                    transition-duration: 0.5s;
+                }
+            }
+            &--generation_list{
+                display: none;
+            }
+        }
+
+        .Header-nav:hover span{
+            background-color: black;
+        }
+
+        
+    
+    }
+}

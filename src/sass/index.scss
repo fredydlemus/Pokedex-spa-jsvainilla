@@ -1,5 +1,24 @@
+@import "./components/headers.scss";
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Main{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 20% 50% 30%;
+    grid-template-areas: 
+        "nav aside"
+        "section aside"
+        "footer aside";
+    position: absolute;
 }
