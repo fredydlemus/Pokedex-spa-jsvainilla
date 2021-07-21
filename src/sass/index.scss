@@ -1,4 +1,9 @@
 @import "./components/headers.scss";
+@import "./components/generationCover.scss";
+
+:root {
+  --red: #e74540;
+}
 
 * {
   margin: 0;

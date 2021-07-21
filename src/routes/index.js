@@ -1,4 +1,5 @@
 import Header from '../templates/Header';
+import GenerationCover from '../templates/GenerationCover';
 
 // const routes = {
 //     '/': Home,
@@ -11,28 +12,16 @@ import Header from '../templates/Header';
 
 const router = async () => {
     const header = null || document.getElementById('header');
-
     header.innerHTML = await Header();
 
-    const generations = document.querySelector('#header-nav');
-    const generationList = document.getElementById('generation-list');
+    const main = null || document.getElementById('main');
+
+    const generationCoverNode = document.createElement("section");
+    generationCoverNode.classList.add('main-generation_cover');
+    generationCoverNode.innerHTML = await GenerationCover();
+    main.appendChild(generationCoverNode);
 
 
-    generations.addEventListener('touchstart',  (evento) => {
-    evento.preventDefault();
-    generationList.classList.remove('hidden');
-    generationList.classList.add('show');
-    
-    generations.addEventListener('touchstart', closeList);
-
-});
-
-const closeList = (evento) => {
-    evento.preventDefault();
-    generationList.classList.remove('show');
-    generationList.classList.add('hidden');
-    generations.removeEventListener('touchstart', closeList);
-}
 };
 
 
