@@ -7,6 +7,8 @@
     align-items: center;
     padding-top: 15px;
     animation: 1s navbar 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+    transform: translateY(-200px);
     @keyframes navbar {
       0% {
         transform: translateY(-200px);
