@@ -1,5 +1,6 @@
 import Header from '../templates/Header';
 import GenerationCover from '../templates/GenerationCover';
+import Carousell from '../templates/Carousell';
 
 // const routes = {
 //     '/': Home,
@@ -20,6 +21,11 @@ const router = async () => {
     generationCoverNode.classList.add('main-generation_cover');
     generationCoverNode.innerHTML = await GenerationCover();
     main.appendChild(generationCoverNode);
+
+    const carousellNode = document.createElement("section")
+    carousellNode.classList.add('carousell');
+    carousellNode.innerHTML = await Carousell();
+    main.appendChild(carousellNode);
 
 
 };
