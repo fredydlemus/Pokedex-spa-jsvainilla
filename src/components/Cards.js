@@ -1,12 +1,12 @@
 const Tarjet = () => {
     const view = `
-    <div class="pokemon">
+    <div class="card-pokemon">
         <img src="./assets/images/001.png" alt="">
-        <p>001</p>
+        <p>No. 001</p>
         <h3>Bulbasaur</h3>
-        <div>
-            <p class="planta">Planta</p>
-            <p class="veneno">Veneno</p>
+        <div class="card-pokemon_tipos">
+            <p class="tipo planta">Planta</p>
+            <p class="tipo veneno">Veneno</p>
         </div>
     </div>
     `;

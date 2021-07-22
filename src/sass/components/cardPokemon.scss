@@ -1,0 +1,28 @@
+.card-pokemon {
+  border-radius: 20px;
+  border: 1px solid gray;
+  width: 90%;
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  img {
+    width: 85%;
+    margin: 0 auto;
+    display: block;
+  }
+  p {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 34px;
+    margin-bottom: 10px;
+  }
+  &_tipos {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+}
