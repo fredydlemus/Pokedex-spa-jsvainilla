@@ -1,7 +1,7 @@
-const API = 'https://pokeapi.co/api/v2/';
+const API = 'https://pokeapi.co/api/v2/pokemon';
 
-const getData = async (id) => {
-    const apiURL = id ? `${API}${id}` : API;
+const getData = async (limit) => {
+    const apiURL = limit ? `${API}${limit}` : API;
     try {
         const response = await fetch(apiURL);
         const data = await response.json();
