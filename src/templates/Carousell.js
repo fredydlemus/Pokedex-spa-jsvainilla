@@ -3,7 +3,7 @@ import getData from '../utils/getData';
 import getDataOnlyPokemon from '../utils/getDataOnlyPokemon';
 
 const Carousell = async () => {
-    let limit = 10;
+    let limit = 151;
     let offset = 0;
     const pokemons = await getData(`?limit=${limit}&offset=${offset}`);
     const numeroPokemons = pokemons.results.length;
