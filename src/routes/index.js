@@ -27,6 +27,7 @@ const router = async () => {
     carousellNode.innerHTML = await Carousell();
     main.appendChild(carousellNode);
 
+   
 
 };
 
