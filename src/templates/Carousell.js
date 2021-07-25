@@ -2,6 +2,7 @@ import Cards from '../components/Cards';
 import getData from '../utils/getData';
 import getDataOnlyPokemon from '../utils/getDataOnlyPokemon';
 
+
 const Carousell = async () => {
     let limit = 151;
     let offset = 0;

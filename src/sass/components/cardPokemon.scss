@@ -17,11 +17,13 @@
     width: 85%;
     margin: 0 auto;
     display: block;
+    margin-bottom: 5px;
     
   }
   p {
     margin-bottom: 10px;
     font-size: 20px;
+    margin-right: 5px;
   }
   h3 {
     font-size: 34px;
@@ -30,7 +32,6 @@
   &_tipos {
     display: flex;
     width: 90%;
-    margin: 0 auto;
-    justify-content: space-around;
+    
   }
 }

@@ -1,17 +1,19 @@
+import getImagePokemon from '../utils/getImagePokemon';
+
 const Tarjet = (num, name, type) => {
-    console.log(type[0].type.name);
+    console.log(type);
     let typesArray = [];
     typesArray = type.map(type => {
 
         return `<p class="tipo ${type.type.name}">${type.type.name}</p>`;
     });
     typesArray = typesArray.join("");
-    console.log(typesArray);
+    // console.log(typesArray);
 
 
     const view = `
     <li class="card-pokemon">
-        <img src="./assets/images/001.png" alt="">
+        <img src="${getImagePokemon(num)}" alt="">
         <div class="card-pokemon-information">
             <p>No. ${num}</p>
             <h3>${name}</h3>
