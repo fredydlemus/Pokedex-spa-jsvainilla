@@ -4,6 +4,7 @@ const getData = async (limit) => {
     const apiURL = limit ? `${API}${limit}` : API;
     try {
         const response = await fetch(apiURL);
+        console.log(apiURL);
         const data = await response.json();
         return data;
 
