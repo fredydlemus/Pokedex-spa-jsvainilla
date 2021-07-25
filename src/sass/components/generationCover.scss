@@ -6,17 +6,20 @@
   margin-bottom: 20px;
   background-color: var(--red);
   padding: 10px;
-  animation: 1s generationCover 1.5s ease-in-out;
-  animation-fill-mode: backwards;
+  // animation: 1s generationCover 1.5s ease-in-out;
+  // animation-fill-mode: forwards;
+  // transform: translateX(-500px);
+  z-index: 0;
 
-  @keyframes generationCover {
-    0% {
-      transform: translateX(-500px);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
+  // @keyframes generationCover {
+  //   0% {
+  //     transform: translateX(-500px);
+      
+  //   }
+  //   100% {
+  //     transform: translateX(0);
+  //   }
+  // }
   img {
     width: 100%;
     margin: 0 auto;
