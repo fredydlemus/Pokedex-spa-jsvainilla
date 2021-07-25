@@ -7,10 +7,17 @@
   margin-top: 10px;
   margin-bottom: 20px;
   list-style: none;
+  &-information{
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(189, 189, 189);
+  }
   img {
     width: 85%;
     margin: 0 auto;
     display: block;
+    
   }
   p {
     margin-bottom: 10px;

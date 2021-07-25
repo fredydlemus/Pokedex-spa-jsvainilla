@@ -16,4 +16,11 @@
   .arrow-desktop {
     display: none;
   }
+  .window{
+    .pokemon-container{
+      height: 1095px;
+      overflow:scroll
+      
+    }
+  }
 }

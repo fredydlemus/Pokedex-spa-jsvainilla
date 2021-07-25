@@ -10,8 +10,8 @@ const Carousell = async () => {
     let cardsArray = [];
     for(let i = 0; i < numeroPokemons; i++){
         const pokemon = await getDataOnlyPokemon(pokemons.results[i].url);
-        cardsArray.push(Cards(pokemon.id, pokemon.name, "tipo"));
-        // console.log(pokemon);
+        cardsArray.push(Cards(pokemon.id, pokemon.name, pokemon.types));
+        console.log(pokemon.types);
         // console.log(cardsArry);
     }
     cardsArray = cardsArray.join("");
