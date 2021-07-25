@@ -3,12 +3,11 @@ import getData from '../utils/getData';
 import getDataOnlyPokemon from '../utils/getDataOnlyPokemon';
 
 
-const Carousell = async (j = 0) => {
-    let limit = 151;
-    let offset = 0;
+const Carousell = async (limit = 151, offset = 0) => {
+    
     const pokemons = await getData(`?limit=${limit}&offset=${offset}`);
     const numeroPokemons = pokemons.results.length;
-    const numeroRenderTarjetas = 3;
+    // const numeroRenderTarjetas = 3;
     let cardsArray = [];
     
     // document.querySelector(".arrow-mobile-up").addEventListener("click", clickBack);
