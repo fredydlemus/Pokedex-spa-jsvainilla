@@ -34,7 +34,7 @@ const router = async () => {
     document.querySelectorAll('.generation > a').forEach(element => {
         element.addEventListener("click", async () =>{
             details.removeAttribute('open');
-            
+            window.scrollTo(0,0);
             switch(element.outerText){
                 case "1ra Generación":
                     
