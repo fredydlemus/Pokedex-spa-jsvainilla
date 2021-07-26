@@ -27,6 +27,7 @@ const Carousell = async (limit = 151, offset = 0) => {
         <ul class="pokemon-container">
         ${cardsArray}
         </ul>
+        <div class="bottom-carousell"></div>
     </div>
     
     `;
