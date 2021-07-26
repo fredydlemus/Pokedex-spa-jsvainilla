@@ -1,6 +1,7 @@
 import Header from '../templates/Header';
 import GenerationCover from '../templates/GenerationCover';
 import Carousell from '../templates/Carousell';
+import Footer from '../templates/Footer';
 
 // const routes = {
 //     '/': Home,
@@ -17,16 +18,18 @@ const router = async () => {
 
     const details = document.querySelector("#header > div > details");
     const main = null || document.getElementById('main');
+    const footer = null || document.getElementById('footer');
+    footer.innerHTML = await Footer();
 
     const generationCoverNode = document.createElement("section");
     generationCoverNode.classList.add('main-generation_cover');
     generationCoverNode.innerHTML = await GenerationCover();
-    main.appendChild(generationCoverNode);
+    main.insertBefore(generationCoverNode, footer);
 
     const carousellNode = document.createElement("section")
     carousellNode.classList.add('carousell');
     carousellNode.innerHTML = await Carousell();
-    main.appendChild(carousellNode);
+    main.insertBefore(carousellNode, footer);
 
     document.querySelectorAll('.generation > a').forEach(element => {
         element.addEventListener("click", async () =>{
