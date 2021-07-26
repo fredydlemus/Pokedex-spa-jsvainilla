@@ -1,7 +1,7 @@
 import getImagePokemon from '../utils/getImagePokemon';
 
 const Tarjet = (num, name, type) => {
-    console.log(type);
+    // console.log(type);
     let typesArray = [];
     typesArray = type.map(type => {
 

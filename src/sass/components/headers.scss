@@ -3,47 +3,44 @@
   z-index: 1;
   &-main {
     display: flex;
+    position: fixed;
     flex-direction: column;
-    height: 150px;
+    height: 125px;
     align-items: center;
     padding-top: 15px;
-    // animation: 1s navbar 0.5s ease-in-out;
-    // animation-fill-mode: forwards;
-    // transform: translateY(-200px);
-    // @keyframes navbar {
-    //   0% {
-    //     transform: translateY(-200px);
-    //   }
-    //   100% {
-    //     transform: translateY(0);
-    //   }
-    // }
+    background-color: #2e2e2e;
+    width: 100%;
+    z-index: 1;
+    
     .Header-logo {
       display: flex;
       align-items: center;
       img {
-        width: 75px;
+        width: 50px;
         padding-right: 10px;
       }
       h1 {
         a {
           text-decoration: none;
+          color: white;
+          font-size: 30px
         }
       }
     }
     &--details {
       position: absolute;
-      top: 75px;
-      background-color: rgb(46, 46, 46);
+      top: 50px;
+      background-color: #3533b5;
       padding: 10px;
       border-radius: 5px;
       color: white;
       width: 75%;
-      margin-top: 20px;
+      margin-top: 15px;
       z-index: 1;
+      max-width: 385px;
 
       summary {
-        margin-bottom: 10px;
+        
         font-size: 24px;
       }
       ul {

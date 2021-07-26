@@ -1,4 +1,6 @@
 .carousell {
+  position: relative;
+  top: 125px;
   .arrow {
     height: 75px;
     width: 75px;
@@ -19,7 +21,6 @@
   .window{
     .pokemon-container{
       height: 1110px;
-      overflow: scroll;
       margin-bottom: 10px;
       
       
