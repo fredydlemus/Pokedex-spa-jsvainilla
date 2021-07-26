@@ -28,29 +28,50 @@ const router = async () => {
     carousellNode.innerHTML = await Carousell();
     main.appendChild(carousellNode);
 
-    document.querySelector("#generation-list > li:nth-child(1)").addEventListener("click", async () => {
-        details.removeAttribute('open');
-        carousellNode.innerHTML = await Carousell(151, 0);
-        
+    document.querySelectorAll('.generation > a').forEach(element => {
+        element.addEventListener("click", async () =>{
+            details.removeAttribute('open');
+            
+            switch(element.outerText){
+                case "1ra Generación":
+                    
+                    carousellNode.innerHTML = await Carousell(151,0);
+                    generationCoverNode.innerHTML = await GenerationCover(element.outerText, "Región Kanto");
+                    break;
+                case "2da Generación":
+                    carousellNode.innerHTML = await Carousell(100, 151);
+                    generationCoverNode.innerHTML = await GenerationCover(element.outerText, "Región Johto");
+                    break;
+                case "3ra Generación":
+                    carousellNode.innerHTML = await Carousell(135, 251);
+                    generationCoverNode.innerHTML = await GenerationCover(element.outerText, "Región Hoenn");
+                    break;
+                case "4ta Generación":
+                    carousellNode.innerHTML = await Carousell(108, 386);
+                    generationCoverNode.innerHTML = await GenerationCover(element.outerText, "Región Sinnoh");
+                break;
+                case "5ta Generación":
+                    carousellNode.innerHTML = await Carousell(154, 494);
+                    generationCoverNode.innerHTML = await GenerationCover(element.outerText, "Región Teselia");
+                break;
+                case "6ta Generación":
+                    carousellNode.innerHTML = await Carousell(72, 649);
+                    generationCoverNode.innerHTML = await GenerationCover(element.outerText, "Región Kalos");
+                break;
+                case "7ma Generación":
+                    carousellNode.innerHTML = await Carousell(88, 721);
+                    generationCoverNode.innerHTML = await GenerationCover(element.outerText, "Región Alola");
+                break;
+                case "8va Generación":
+                    carousellNode.innerHTML = await Carousell(89, 809);
+                    generationCoverNode.innerHTML = await GenerationCover(element.outerText, "Región Galar");
+                break;
+                default:
+                    break;
+            }
+        })
     });
-
-    document.querySelector("#generation-list > li:nth-child(2)").addEventListener("click", async () => {
-        details.removeAttribute('open');
-        carousellNode.innerHTML = await Carousell(100, 151);
-        
-    });
-
-    document.querySelector("#generation-list > li:nth-child(3)").addEventListener("click", async () => {
-        details.removeAttribute('open');
-        carousellNode.innerHTML = await Carousell(135, 251);
-        
-    });
-
-    document.querySelector("#generation-list > li:nth-child(4)").addEventListener("click", async () => {
-        details.removeAttribute('open');
-        carousellNode.innerHTML = await Carousell(108, 386);
-        
-    });
+    
 };
 
 

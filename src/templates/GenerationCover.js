@@ -1,8 +1,10 @@
-const GenerationCover = () => {
+const GenerationCover = (generation = "1ra Generación", region = "Región Kanto") => {
+
+   
     const view = `
-    <h2>Primera Generación</h2>
-    <p>Región Kanto</p>
-    <img src="./assets/images/first.jpg" alt="">
+    <h2>${generation}</h2>
+    <p>${region}</p>
+    
     `;
 
     return view;
