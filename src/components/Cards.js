@@ -13,7 +13,7 @@ const Tarjet = (num, name, type) => {
 
     const view = `
     <li class="card-pokemon">
-        <img src="${getImagePokemon(num)}" alt="">
+        <img src="${getImagePokemon(num)}" alt="" loading="lazy">
         <div class="card-pokemon-information">
             <p>No. ${num}</p>
             <h3>${name}</h3>
