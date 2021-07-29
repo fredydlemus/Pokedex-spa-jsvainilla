@@ -1,7 +1,7 @@
-const API = 'https://pokeapi.co/api/v2/pokemon';
+const API = 'https://pokeapi.co/api/v2/pokemon/';
 
-const getData = async (limit) => {
-    const apiURL = limit ? `${API}${limit}` : API;
+const getData = async ({limit, id}) => {
+    const apiURL = id ? `${API}${id}` : `${API}${limit}`;
     // let pokeImage = document.createElement('img');
     try {
         const response = await fetch(apiURL);

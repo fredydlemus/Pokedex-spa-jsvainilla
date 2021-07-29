@@ -5,7 +5,9 @@ import getDataOnlyPokemon from '../utils/getDataOnlyPokemon';
 
 const Carousell = async (limit = 151, offset = 0) => {
     
-    const pokemons = await getData(`?limit=${limit}&offset=${offset}`);
+    const pokemons = await getData({
+        limit: `?limit=${limit}&offset=${offset}`
+    });
     const numeroPokemons = pokemons.results.length;
     // const numeroRenderTarjetas = 3;
     let cardsArray = [];

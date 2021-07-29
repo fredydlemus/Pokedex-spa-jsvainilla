@@ -11,14 +11,14 @@ const Header = () => {
     <details class="Header-main--details">
         <summary>Generación</summary>
         <ul class="Header-nav--generation_list" id="generation-list">
-            <li class="generation"><a href="#/about/">1ra Generación</a></li>
-            <li class="generation"><a href="#/about/">2da Generación</a></li>
-            <li class="generation"><a href="#/about/">3ra Generación</a></li>
-            <li class="generation"><a href="#/about/">4ta Generación</a></li>
-            <li class="generation"><a href="#/about/">5ta Generación</a></li>
-            <li class="generation"><a href="#/about/">6ta Generación</a></li>
-            <li class="generation"><a href="#/about/">7ma Generación</a></li>
-            <li class="generation"><a href="#/about/">8va Generación</a></li>
+            <li class="generation"><button>1ra Generación</button></li>
+            <li class="generation"><button>2da Generación</button></li>
+            <li class="generation"><button>3ra Generación</button></li>
+            <li class="generation"><button>4ta Generación</button></li>
+            <li class="generation"><button>5ta Generación</button></li>
+            <li class="generation"><button>6ta Generación</button></li>
+            <li class="generation"><button>7ma Generación</button></li>
+            <li class="generation"><button>8va Generación</button></li>
     
         </ul>
     </details>
