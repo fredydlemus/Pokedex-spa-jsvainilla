@@ -39,6 +39,7 @@ const router = async () => {
     document.querySelectorAll('.generation > button').forEach(element => {
         element.addEventListener("click", async () =>{
             details.removeAttribute('open');
+            content.innerHTML = await Home();
             
             window.scrollTo(0,0);
             switch(element.outerText){
