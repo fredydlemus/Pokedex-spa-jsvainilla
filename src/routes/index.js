@@ -33,14 +33,15 @@ const router = async () => {
 
 
     const details = document.querySelector("#header > div > details");
-    const carousel = document.getElementById('carousell');
-    const generationCover = document.getElementById('generation-cover');
+    
 
     document.querySelectorAll('.generation > button').forEach(element => {
         element.addEventListener("click", async () =>{
             details.removeAttribute('open');
             content.innerHTML = await Home();
-            
+            const carousel = document.getElementById('carousell');
+            const generationCover = document.querySelector("#generation-cover");
+
             window.scrollTo(0,0);
             switch(element.outerText){
                 case "1ra Generación":
