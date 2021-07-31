@@ -1,7 +1,7 @@
 import getImagePokemon from '../utils/getImagePokemon';
 
 const Tarjet = (num, name, type) => {
-    // console.log(type);
+    let numString;
     let typesArray = [];
     typesArray = type.map(type => {
 
@@ -11,10 +11,10 @@ const Tarjet = (num, name, type) => {
     // console.log(typesArray);
 
     if(num.toString().length == 1){
-        num = "00"+num;
+        numString = "00"+num;
         
     }else if(num.toString().length == 2){
-        num = "0"+num
+        numString = "0"+num
     }
 
     console.log(num);
@@ -22,7 +22,7 @@ const Tarjet = (num, name, type) => {
     const view = `
     <li class="card-pokemon">
         <a href="#/${num}">
-            <img src="${getImagePokemon(num)}" alt="" loading="lazy">
+            <img src="${getImagePokemon(numString)}" alt="" loading="lazy">
             <div class="card-pokemon-information">
                 <p>No. ${num}</p>
                 <h3>${name}</h3>
