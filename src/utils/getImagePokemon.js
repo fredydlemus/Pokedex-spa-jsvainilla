@@ -1,4 +1,4 @@
-const API = `https://pokeres.bastionbot.org/images/pokemon/`;
+const API = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/`;
 
 const getImagePokemon = (pokemonID) => {
     const apiURL = `${API}${pokemonID}.png`;

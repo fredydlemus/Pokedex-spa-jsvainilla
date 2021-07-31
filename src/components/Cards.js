@@ -10,6 +10,14 @@ const Tarjet = (num, name, type) => {
     typesArray = typesArray.join("");
     // console.log(typesArray);
 
+    if(num.toString().length == 1){
+        num = "00"+num;
+        
+    }else if(num.toString().length == 2){
+        num = "0"+num
+    }
+
+    console.log(num);
 
     const view = `
     <li class="card-pokemon">

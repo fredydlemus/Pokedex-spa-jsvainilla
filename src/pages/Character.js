@@ -19,7 +19,7 @@ const Character = async () => {
             <img src="${getImagePokemon(id)}" alt="${character.name}">
             <h3>${id}</h3>
             <h2>${character.name}</h2>
-            <p>${console.log(character)}</p>
+            
             <h3>Abilities:</h3>
             ${abilitiesArray}
             <h3>Moves:</h3>
