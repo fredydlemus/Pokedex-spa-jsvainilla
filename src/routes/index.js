@@ -54,12 +54,16 @@ const router = async () => {
         const tagName = event.target.tagName;
         if(['LI', 'BUTTON'].includes(tagName)){
             paintCarousell(event);
+            
         }
+
+        
     })
 
+    
 
     if(document.getElementById('character')){
-        window.removeEventListener('hashchange', router);
+        
         const previousButton = document.getElementById('previous-button');
         const nextButton = document.getElementById('next-button');
         
@@ -69,11 +73,10 @@ const router = async () => {
 
         if(parseInt(getHash()) !== 898){
             nextButton.classList.remove('disabledbutton');
-            console.log('deberia estar libre');
-            console.log(nextButton);
+            
         }
 
-        window.addEventListener('hashchange', router);
+       
 
     }
     
@@ -82,5 +85,7 @@ const router = async () => {
     
     
 }
+
+
 
 export default router;

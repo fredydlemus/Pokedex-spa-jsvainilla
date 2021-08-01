@@ -6,9 +6,10 @@ const Header = () => {
         <img src="./assets/images/pokeball.png" alt="">
         <h1>
             <a href="/Pokedex-spa-jsvainilla/">Pokedex</a>
+            <a href="/">P<a>
         </h1>
     </div>
-    <details class="Header-main--details">
+    <details class="Header-main--details" id="details">
         <summary>Generación</summary>
         <ul class="Header-nav--generation_list" id="generation-list">
             <li class="generation"><button>1ra Generación</button></li>

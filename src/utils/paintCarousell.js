@@ -2,15 +2,18 @@ import Carousell from '../templates/Carousell';
 import GenerationCover from '../templates/GenerationCover';
 import Home from '../pages/Home';
 import lozad from 'lozad';
+import router from '../routes';
+
 
 
 async function paintCarousell(event){
     
     
+    window.removeEventListener('hashchange', router);
+    location.hash = "/Pokedex-spa-jsvainilla/";    
     
-        
-    
-    const details = document.querySelector("#header > div > details");
+
+    const details = document.getElementById("details");
     const content = document.getElementById('content');
 
     details.removeAttribute('open');
@@ -68,6 +71,12 @@ async function paintCarousell(event){
             default:
                 break;
         }
+
+        // window.removeEventListener('hashchange', router);
+        // location.hash =  "/";
+        
+       
+        window.addEventListener('hashchange', router);
 
     const carousellImages = document.querySelectorAll('.card-img');
     const observer = lozad(carousellImages);
