@@ -1,17 +1,18 @@
 import GenerationCover from '../templates/GenerationCover';
 import Carousell from '../templates/Carousell';
-import lozad from 'lozad';
 
-const Home = async () => {
 
-    
+const Home = async (limit = 150, offset = 0) => {
+
+    const carousell = await Carousell(limit, offset);
+    const generationCover = await GenerationCover();
 
     const view = `
     <section class="main-generation_cover" id="generation-cover">
-        ${await GenerationCover()}
+        ${generationCover}
     </section>
     <section class="carousell" id="carousell">
-        ${await Carousell()}
+        ${carousell}
     </section>
     `;
 

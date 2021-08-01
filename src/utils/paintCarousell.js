@@ -9,8 +9,8 @@ async function paintCarousell(event){
     
 
     details.removeAttribute('open');
-        content.innerHTML = await Home();
-        const carousel = document.getElementById('carousell');
+        
+        
         const generationCover = document.querySelector("#generation-cover");
         
 
@@ -18,12 +18,12 @@ async function paintCarousell(event){
         switch(event.target.outerText){
             case "1ra Generación":
                 
-                carousel.innerHTML = await Carousell(151,0);
+                content.innerHTML = await Home(151,0);
                 generationCover.innerHTML = await GenerationCover(event.target.outerText, "Región Kanto");
                 
                 break;
             case "2da Generación":
-                carousel.innerHTML = await Carousell(100, 151);
+                content.innerHTML = await Home(100, 151);
                 generationCover.innerHTML = await GenerationCover(event.target.outerText, "Región Johto");
                 break;
             case "3ra Generación":

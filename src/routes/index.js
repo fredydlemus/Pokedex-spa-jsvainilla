@@ -6,6 +6,8 @@ import Character from '../pages/Character';
 import Home from '../pages/Home';
 import paintCarousell from '../utils/paintCarousell';
 import lozad from 'lozad';
+import Carousell from '../templates/Carousell';
+import GenerationCover from '../templates/GenerationCover';
 
 const routes = {
     '/': Home,
@@ -37,11 +39,16 @@ const router = async () => {
     let route = await resolveRoutes(hash);
     let render = routes[route] ? routes[route] : console.error("404");
     content.innerHTML = await render();
+
+    
+
+
     const carousellImages = document.querySelectorAll('.card-img');
     const observer = lozad(carousellImages);
     console.log("paso por aqui :v");
     observer.observe();
     
+
 
     
     document.getElementById('generation-list').addEventListener('click', (event) => {

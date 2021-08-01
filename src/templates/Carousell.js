@@ -3,7 +3,7 @@ import getData from '../utils/getData';
 import getDataOnlyPokemon from '../utils/getDataOnlyPokemon';
 
 
-const Carousell = async (limit = 151, offset = 0) => {
+const Carousell = async (limit, offset) => {
     
     const pokemons = await getData({
         limit: `?limit=${limit}&offset=${offset}`
