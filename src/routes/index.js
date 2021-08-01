@@ -6,8 +6,7 @@ import Character from '../pages/Character';
 import Home from '../pages/Home';
 import paintCarousell from '../utils/paintCarousell';
 import lozad from 'lozad';
-import Carousell from '../templates/Carousell';
-import GenerationCover from '../templates/GenerationCover';
+
 
 const routes = {
     '/': Home,
@@ -39,13 +38,13 @@ const router = async () => {
     let route = await resolveRoutes(hash);
     let render = routes[route] ? routes[route] : console.error("404");
     content.innerHTML = await render();
+    window.scrollTo(0,0);
 
     
 
 
     const carousellImages = document.querySelectorAll('.card-img');
     const observer = lozad(carousellImages);
-    console.log("paso por aqui :v");
     observer.observe();
     
 
@@ -57,6 +56,27 @@ const router = async () => {
             paintCarousell(event);
         }
     })
+
+
+    if(document.getElementById('character')){
+        window.removeEventListener('hashchange', router);
+        const previousButton = document.getElementById('previous-button');
+        const nextButton = document.getElementById('next-button');
+        
+        if(parseInt(getHash()) !== 1){
+            previousButton.classList.remove('disabledbutton');
+            }
+
+        if(parseInt(getHash()) !== 898){
+            nextButton.classList.remove('disabledbutton');
+            console.log('deberia estar libre');
+            console.log(nextButton);
+        }
+
+        window.addEventListener('hashchange', router);
+
+    }
+    
 
     //Add lazy loading
     

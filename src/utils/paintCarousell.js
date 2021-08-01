@@ -6,7 +6,8 @@ import lozad from 'lozad';
 
 async function paintCarousell(event){
     
-        
+    
+    
         
     
     const details = document.querySelector("#header > div > details");

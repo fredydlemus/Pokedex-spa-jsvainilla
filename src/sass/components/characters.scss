@@ -66,15 +66,18 @@
         width: 70%;
         margin: 0 auto;
         margin-top: 20px;
-        button{
+        a{
             padding: 10px;
             border-radius: 20px;
             border: none;
             background-color: #3533b5;
             color: white;
             width: 100px;
+            text-align: center;
+            text-decoration: none;
             &:hover{
                 background-color:#4341ee ;
+                cursor: pointer;
             }
         }
     }

@@ -12,7 +12,7 @@ const Character = async () => {
     const description = await getPokemonDescription(id);
     
     let entrys = description.flavor_text_entries;
-    console.log(description);
+    
     let version;
 
 
@@ -80,15 +80,18 @@ const Character = async () => {
             </section>
         </section>
         <section class="Character-buttons">
-            <button>Back</button>
-            <button>Next</button>
+            <a href="#/${parseInt(id)-1}" id="previous-button" class="disabledbutton">Previous</a>
+            <a href="#/${parseInt(id)+1}" id="next-button" class="disabledbutton">Next</a>
         </section>
         <div class="bottom-character"></div>
     </section>
     
+
     
     
     `;
+
+    
 
     return view;
 }
