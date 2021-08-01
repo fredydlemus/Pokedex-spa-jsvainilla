@@ -49,8 +49,16 @@
         height: 225px;
         overflow: scroll;
         li {
-          padding: 15px;
+          
           border-bottom: 1px solid gray;
+          button{
+            width: 100%;
+            padding: 15px;
+            background-color: rgb(41, 41, 41);;
+            border: none;
+            color: white;
+            font-size: 20px;
+          }
           a {
             color: white;
             text-decoration: none;
@@ -58,6 +66,9 @@
           }
         }
       }
+    }
+    &--details:hover{
+      background-color: #4341ee;
     }
   }
 }

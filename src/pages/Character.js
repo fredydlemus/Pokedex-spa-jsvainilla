@@ -34,7 +34,7 @@ const Character = async () => {
     });
 
     character.types.forEach(element => {
-        let type = `<p>${element.type.name}</p>`
+        let type = `<p class="${element.type.name} tipo">${element.type.name}</p>`
         typesArray.push(type);
         
     })
@@ -50,24 +50,30 @@ const Character = async () => {
 
     const view = `
 
-    
-        <article class="Characters-header">
-            <h3>${numString}</h3>
+    <section class="Character" id="character">
+        <article class="Character-header">
+            <h3>${numString}/</h3>
             <h2>${character.name}</h2>
         </article>
-        <section class="Characters-info">
+        <section class="Character-info">
             <img src="${getImagePokemon(numString)}" alt="${character.name}">
             <section class="Character-card">
-                <p class="Charcter-description">${entrys[version].flavor_text}</p>
+                <p class="Character-card-description">${entrys[version].flavor_text}</p>
                 <div class="Character-card-info">
-                    <h3>Height:</h3>
-                    <p>${character.height} m</p>
-                    <h3>weight:</h3>
-                    <p>${character.weight} kg</p>
-                    <h3>Abilities:</h3>
-                    ${abilitiesArray}
+                    <section class="height">
+                        <h3>height:</h3>
+                        <p>${character.height} m</p>
+                    </section>
+                    <section class="weight">
+                        <h3>Weight:</h3>
+                        <p>${character.weight} kg</p>
+                    </section>
+                    <section class="abilities">
+                        <h3>Abilities:</h3>
+                        ${abilitiesArray}
+                    </section>
                 </div>
-                <div class="character-types">
+                <div class="Character-types">
                     <h3>Types:</h3>
                     ${typesArray}
                 </div>
@@ -77,6 +83,9 @@ const Character = async () => {
             <button>Back</button>
             <button>Next</button>
         </section>
+        <div class="bottom-character"></div>
+    </section>
+    
     
     
     `;

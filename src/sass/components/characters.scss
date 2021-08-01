@@ -1,0 +1,105 @@
+.Character{
+    position: relative;
+    top: 125px;
+    overflow: scroll;
+    &-header{
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+        background-color: #a9a4a4;
+        h3, h2{
+            font-size: 35px;
+        }
+    }
+    &-info{
+        img{
+            margin: 0 auto;
+            display: block;
+            border: 1px solid gray;
+            border-radius: 10px;
+            
+            margin-top: 20px;
+        }
+    }
+    &-card{
+        margin: 0 auto;
+        width: 90%;
+        margin-top: 20px;
+        max-width: 500px;
+        &-info{
+            background-color: #3533b5;
+            margin-top: 20px;
+            border-radius: 10px;padding: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            color: white;
+            .height, .weight, .abilities{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                border: 0.5px solid #4341ee;
+                margin: 1px;
+                padding: 5px;
+            }
+            
+        }
+        &-description{
+            text-align: center;
+        }
+        
+    }
+    &-types{
+        display: flex;
+        justify-content: space-evenly;
+        width: 85%;
+        margin: 0 auto;
+        margin-top: 20px;
+        border: 1px solid gray;
+        border-radius: 10px;
+        padding: 10px;
+        max-width: 330px;
+    }
+    &-buttons{
+        display: flex;
+        justify-content: space-around;
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 20px;
+        button{
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            background-color: #3533b5;
+            color: white;
+            width: 100px;
+            &:hover{
+                background-color:#4341ee ;
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        &-info{
+            display: flex;
+            justify-content: space-evenly;
+            margin: 0 auto;
+            margin-top: 100px;
+            max-width: 1024px;
+            img{
+                margin: 0;
+                width: 40%;
+                max-width: 320px;
+            }
+        }
+        &-card{
+            margin: 0;
+            width: 50%;
+        }
+    }
+}
+
+.bottom-character{
+    height: 70px;
+    width: 100%;
+}
