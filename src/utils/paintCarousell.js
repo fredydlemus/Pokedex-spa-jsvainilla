@@ -1,6 +1,8 @@
 import Carousell from '../templates/Carousell';
 import GenerationCover from '../templates/GenerationCover';
 import Home from '../pages/Home';
+import lozad from 'lozad';
+
 
 async function paintCarousell(event){
     const details = document.querySelector("#header > div > details");
@@ -10,6 +12,7 @@ async function paintCarousell(event){
         content.innerHTML = await Home();
         const carousel = document.getElementById('carousell');
         const generationCover = document.querySelector("#generation-cover");
+        
 
         window.scrollTo(0,0);
         switch(event.target.outerText){
@@ -50,6 +53,12 @@ async function paintCarousell(event){
             default:
                 break;
         }
+
+        const carousellImages = document.querySelectorAll('.card-img');
+    const observer = lozad(carousellImages);
+    console.log("paso por a :v");
+    observer.observe();
+    
 }
 
 export default paintCarousell;

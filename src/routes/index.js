@@ -5,6 +5,7 @@ import resolveRoutes from '../utils/resolveRoutes';
 import Character from '../pages/Character';
 import Home from '../pages/Home';
 import paintCarousell from '../utils/paintCarousell';
+import lozad from 'lozad';
 
 const routes = {
     '/': Home,
@@ -16,6 +17,13 @@ const routes = {
 
 
 const router = async () => {
+
+    
+    
+    
+    
+
+
     const header = null || document.getElementById('header');
     const content = document.getElementById('content');
     const footer = null || document.getElementById('footer');
@@ -29,16 +37,13 @@ const router = async () => {
     let route = await resolveRoutes(hash);
     let render = routes[route] ? routes[route] : console.error("404");
     content.innerHTML = await render();
-
+    const carousellImages = document.querySelectorAll('.card-img');
+    const observer = lozad(carousellImages);
+    console.log("paso por aqui :v");
+    observer.observe();
+    
 
     
-    document.querySelectorAll('.generation > button').forEach(element => {
-        element.addEventListener("click", async () =>{
-            
-        })
-    });
-
-
     document.getElementById('generation-list').addEventListener('click', (event) => {
         const tagName = event.target.tagName;
         if(['LI', 'BUTTON'].includes(tagName)){
@@ -46,6 +51,8 @@ const router = async () => {
         }
     })
 
+    //Add lazy loading
+    
     
 }
 

@@ -24,7 +24,7 @@ const Tarjet = (num, name, type) => {
     const view = `
     <li class="card-pokemon">
         <a href="#/${num}">
-            <img width="85%" height="auto" src="${getImagePokemon(numString)}" alt="" loading="lazy">
+            <img width="85%" height="auto" data-src="${getImagePokemon(numString)}" alt="" class="card-img" data-backgrund-image="../assets/images/pokemon.png">
             <div class="card-pokemon-information">
                 <p>No. ${num}</p>
                 <h3>${name}</h3>
@@ -37,6 +37,7 @@ const Tarjet = (num, name, type) => {
         
     </li>
     `;
+    
 
     return view;
 }
