@@ -5,7 +5,7 @@ const Header = () => {
     <div class="Header-logo">
         <img src="./assets/images/pokeball.png" alt="">
         <h1>
-            <a href="/">Pokedex</a>
+            <a href="/Pokedex-spa-jsvainilla/">Pokedex</a>
         </h1>
     </div>
     <details class="Header-main--details">
