@@ -28,11 +28,15 @@ plugins.push(new CopyWebpackPlugin({
     }],
 }));
 
+const nodeEnv = process.env.NODE_ENV || 'development'
+
 
 module.exports = {
+    mode: nodeEnv,
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
+        publicPath: '/dist/',
         filename: '[name].main.js',
     },
     resolve: {
