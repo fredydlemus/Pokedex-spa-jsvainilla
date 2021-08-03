@@ -1,0 +1,13 @@
+name: Trigger Netlify Build
+
+on:
+  schedule:
+    - cron: '0 10 * * 1'
+
+jobs:
+  build:
+    name: Request Netlify Webhook
+    runs-on: ubuntu-latest
+    steps:
+      -name: Ping
+        run: curl -X POST -d {} https://api.netlify.com/build_hooks/6108c849a18b5bdc42c827c0
