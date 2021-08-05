@@ -26,7 +26,7 @@ const router = async () => {
 
 
     const header = null || document.getElementById('header');
-    const content = document.getElementById('content');
+    const content = null || document.getElementById('content');
     const footer = null || document.getElementById('footer');
 
 

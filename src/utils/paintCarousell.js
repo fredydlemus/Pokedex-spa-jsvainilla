@@ -8,6 +8,9 @@ import router from '../routes';
 
 async function paintCarousell(event){
     
+    let limit;
+    let offset;
+    let region;
     
     window.removeEventListener('hashchange', router);
     location.hash = "/Pokedex-spa-jsvainilla/";    
@@ -26,51 +29,61 @@ async function paintCarousell(event){
         switch(event.target.outerText){
             case "1ra Generación":
                 
-                content.innerHTML = await Home(151,0);
-                
-                document.querySelector("#generation-cover").innerHTML = await GenerationCover(event.target.outerText, "Región Kanto");
-                
+                limit = 150;
+                offset = 0;
+                region = "Kanto";
+                                
                 break;
             case "2da Generación":
                 
-                content.innerHTML = await Home(100, 151);
-                
-                document.querySelector("#generation-cover").innerHTML = await GenerationCover(event.target.outerText, "Región Johto");
-                
+                limit = 100;
+                offset = 151;
+                region = "Johto";
+                    
                 break;
             case "3ra Generación":
-                content.innerHTML = await Home(135, 251);
+                limit = 135;
+                offset = 251;
+                region = "Hoenn";
                 
-                document.querySelector("#generation-cover").innerHTML = await GenerationCover(event.target.outerText, "Región Hoenn");
                 break;
             case "4ta Generación":
-                content.innerHTML = await Home(108, 386);
-               
-                document.querySelector("#generation-cover").innerHTML = await GenerationCover(event.target.outerText, "Región Sinnoh");
-            break;
+                limit = 108;
+                offset = 386;
+                region = "Sinnoh";
+                
+                break;
             case "5ta Generación":
-                content.innerHTML = await Home(154, 494);
-               
-                document.querySelector("#generation-cover").innerHTML = await GenerationCover(event.target.outerText, "Región Teselia");
-            break;
+                limit = 154;
+                offset = 494;
+                region = "Teselia";
+                
+                break;
             case "6ta Generación":
-                content.innerHTML = await Home(72, 649);
+                limit = 72;
+                offset = 649;
+                region = "Kalos";
                 
-                document.querySelector("#generation-cover").innerHTML = await GenerationCover(event.target.outerText, "Región Kalos");
-            break;
+                break;
             case "7ma Generación":
-                content.innerHTML = await Home(88, 721);
+                limit = 88;
+                offset = 721;
+                region = "Alola";
                 
-                document.querySelector("#generation-cover").innerHTML = await GenerationCover(event.target.outerText, "Región Alola");
-            break;
+                break;
             case "8va Generación":
-                content.innerHTML = await Home(89, 809);
+                limit = 89;
+                offset = 809;
+                region = "Galar";
                 
-                document.querySelector("#generation-cover").innerHTML = await GenerationCover(event.target.outerText, "Región Galar");
-            break;
+                break;
             default:
                 break;
         }
+
+        content.innerHTML = await Home(limit,offset);
+                
+                document.querySelector("#generation-cover").innerHTML = await GenerationCover(event.target.outerText, `Region ${region}`);
 
         // window.removeEventListener('hashchange', router);
         // location.hash =  "/";
